@@ -23,4 +23,16 @@
 - Track jumper availability and certifications
 - Allocate aircraft slots (limited seats per plane)
 - Balance team composition (need experienced flyers for relative work)
-- Suggest jump groups and or
+- Suggest jump groups and order
+
+**Tools:**
+- `get_jumpers()` → list of available jumpers with certifications
+- `get_aircraft()` → available planes and capacity
+- `reserve_slot(jumper_id, aircraft_id, time)` → book a slot
+- `check_conflicts(jumper_id, time)` → verify no double-bookings
+
+**Success Criteria:**
+- Assigns all jumpers to aircraft safely
+- Respects certifications (experienced RW flyers in team jumps)
+- Manages overbooking
+- Suggests optimal jump order (easier jumps first, warm-up)
